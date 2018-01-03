@@ -3,18 +3,18 @@ app = Flask(__name__)
 
 @app.route('/Gerichte')
 def meals():
-  return render_template('meals.html')
+  return render_template('meals.html', title='Gerichte')
 
 @app.route('/Info')
 def info():
-  return render_template('info.html')
+  return render_template('info.html', title='Info')
 
 @app.route('/Impressum')
 def impressum():
-  return render_template('impressum.html')
+  return render_template('impressum.html', title='Impressum')
 
 @app.route('/')
 def index():
-  return render_template('index.html')
+  return render_template('index.html', title='Spatzennest am Fahlt')
 
 
