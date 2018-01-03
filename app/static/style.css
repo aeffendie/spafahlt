@@ -13,6 +13,24 @@ h1 {
   margin-bottom: 20px;
 }
 
+.mealp {
+  width: 400px;
+  height:  300px;
+  display: inline-block;
+  float: right;
+}
+
+.meal {
+  height: 400;
+  width: 817px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.mealt {
+  float: left;
+}
+
 .container {
   margin: 75px auto;
   margin-bottom: 20px;
@@ -66,24 +84,29 @@ nav {
   width: 100%;
   background: #fff7ca;
   box-shadow: 0 3px 10px -2px rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(0, 0, 0, 0.1); }
+  border: 1px solid rgba(0, 0, 0, 0.1); 
+  z-index: 1;
+  }
 
 nav ul {
   list-style: none;
   position: relative;
   float: right;
-  margin-right: 100px;
-  display: inline-table; }
+  margin-right: 25px;
+  display: inline-table; 
+  }
 
 nav ul li {
   float: left;
   -webkit-transition: all .2s ease-in-out;
   -moz-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out; }
+  transition: all .2s ease-in-out; 
+  }
 
 .link:hover {
-  background: rgba(0, 0, 0, 0.15); }
-
+  background: rgba(0, 0, 0, 0.15);
+  }
+  
 nav ul li:hover > ul {
   display: block; }
 

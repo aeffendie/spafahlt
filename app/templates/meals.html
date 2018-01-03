@@ -2,5 +2,14 @@
 {% block content %}
 
 Lorem ipsum dolor.
-
+<div class='meal'>
+  <p class='mealt'> Das ist kein Gericht, sondern eine Landschaft. </p>
+  <img class='mealp' src={{ url_for('static', filename='nature1.jpg') }}>
+</div>
+<div class='meal'> 
+  <p class='mealt'> Das wirkliche Essen schmeckt fantastisch.<br>
+  <br><br> Probieren kostet nur ein wenig <br> <br> Jeder wird es lieben</p>
+  <img class='mealp' src= {{ url_for('static', filename='nature2.jpg') }}>
+</div>
+  
 {%endblock content %}
