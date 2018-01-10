@@ -1,15 +1,28 @@
 {% extends 'layout.html' %}
-{% block content %}
 
-Lorem ipsum dolor.
+{% block menu %}
+
+<div class='categories'>
+  <ul class='list'>
+    <li>
+      <a class='category' href='#day'>Tagesgerichte</a>
+    </li>
+    <li>
+      <a class='category' href='#eday'>Gerichte</a>
+    </li>
+    <li>
+      <a class='category' href='#drink'>Getraenke</a>
+    </li>
+  </ul>
+</div>
+ 
+{% endblock menu %}
+
+{% block content %}
+{% for meal in meals %}
 <div class='meal'>
-  <p class='mealt'> Das ist kein Gericht, sondern eine Landschaft. </p>
-  <img class='mealp' src={{ url_for('static', filename='nature1.jpg') }}>
+  <p class='mealt'> {{ meal[0] }}</p>
+  <img class='mealp' src="{{ meal[1] }}">
 </div>
-<div class='meal'> 
-  <p class='mealt'> Das wirkliche Essen schmeckt fantastisch.<br>
-  <br><br> Probieren kostet nur ein wenig <br> <br> Jeder wird es lieben</p>
-  <img class='mealp' src= {{ url_for('static', filename='nature2.jpg') }}>
-</div>
-  
+{% endfor %}
 {%endblock content %}
