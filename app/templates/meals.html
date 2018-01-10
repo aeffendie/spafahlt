@@ -1,28 +1,62 @@
 {% extends 'layout.html' %}
-
-{% block menu %}
-
-<div class='categories'>
-  <ul class='list'>
-    <li>
-      <a class='category' href='#day'>Tagesgerichte</a>
-    </li>
-    <li>
-      <a class='category' href='#eday'>Gerichte</a>
-    </li>
-    <li>
-      <a class='category' href='#drink'>Getraenke</a>
-    </li>
-  </ul>
-</div>
- 
-{% endblock menu %}
-
 {% block content %}
-{% for meal in meals %}
+
+Wir bieten Ihnen taeglich abwechslungsreiche Men&uuml;s, die wir immer wieder neu
+zusammenstellen. Hier finden Sie einen kleinen Einblick in unser Angebot: <br><br>
+
 <div class='meal'>
-  <p class='mealt'> {{ meal[0] }}</p>
-  <img class='mealp' src="{{ meal[1] }}">
+  <p class='mealt'> 
+    Nat&uuml;rlich gibt es bei uns viele verschiedene <br>
+    Sorten von Kaffee. Sie finden bei uns Capuccino, <br>
+    Cafe Crema, Latte Machiato und Espresso von <br>
+    frisch gemahlenen Kaffeebohnen.  
+  </p>
+  <img class='mealp' src={{ url_for('static', filename='imgs/Capuccino.jpg') }}>
 </div>
-{% endfor %}
+
+<div class='meal'> 
+  <p class='mealt'>
+    Neben Kaffee werden auch heisse Schokolade und <br>
+    diverse Teesorten angeboten. Sie haben die Wahl <br>
+    zwischen Darjeeling, Earl Grey, Kr&auml;utertee und <br>
+    Yoga Tee neben unseren frisch zubereiteten <br>
+    Minztee und Ingwertee.
+  </p>
+  <img class='mealp' src= {{ url_for('static', filename='imgs/Tee.JPG') }}>
+</div>
+
+<div class='meal'>
+ <p class='mealt'>
+  Zu unseren warmen Getr&auml;nken bieten wir jeden <br>
+  Tag hausgemachte Torte oder hausgemachten <br>
+  Kuchen, in einer von vielen Variationen.
+ </p>
+ <img class='mealp' src={{ url_for('static', filename='imgs/KaffeeUndKuchen.JPG') }}>
+</div>
+
+<div class='meal'>
+ <p class='mealt'>
+  Sollten Sie ein bisschen mehr Hunger haben <br>
+  oder gerade auf Mittagspause sind, m&ouml;chten <br>
+  wir Ihnen unser Mittagsmen&uuml; empfehlen. Jeden <br>
+  Mittag koennen Sie entweder eine vegetarische <br>
+  oder vegane Suppe, oder ein <br>
+  Indonesisches Mittagsgericht geniessen. <br>
+  Sollten diese noch nicht fuer Sie bereit <br>
+  stehen, k&ouml;nnen wir Ihnen auch Quiche und <br>
+  Salat anbieten.
+ </p>
+ <img class='mealp' src={{ url_for('static', filename='imgs/CarreAyam.jpg') }}>
+</div>
+
+<div class='meal'>
+ <p class='mealt'>
+  F&uuml;r kleine H&auml;ppchen zwischendurch haben <br>
+  wir auch eine nette Auswahl an Geb&auml;ck f&uuml;r <br>
+  Sie. Ob s&uuml;ss, oder herzhaft, Sie finden mit <br>
+  Sicherheit ein kleines etwas zum Mitnehmen!
+ </p>
+ <img class='mealp' src={{ url_for('static', filename='imgs/Nata.JPG') }}>
+</div>
+  
 {%endblock content %}
